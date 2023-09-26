@@ -1,14 +1,13 @@
+"""program to showcase simple thread"""
 import concurrent.futures
 import time
-"""program to showcase simple thread"""
 start = time.perf_counter()
 
-"""showcasing timer"""
 def do_something(seconds):
+    """showcasing timer"""
     print(f'Sleeping {seconds} second(s)')
     time.sleep(seconds)
     print(f'done sleeping for {seconds} second(s)')
-    return f'Done Sleeping...{seconds}'
 
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
