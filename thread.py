@@ -3,10 +3,11 @@ import time
 
 start = time.perf_counter()
 
-
+"""showcasing timer"""
 def do_something(seconds):
-    print(f'Sleeping {seconds} second(s)...')
+    print(f'Sleeping {seconds} second(s)')
     time.sleep(seconds)
+    print(f'done sleeping for {seconds} second(s)')
     return f'Done Sleeping...{seconds}'
 
 
