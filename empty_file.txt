@@ -1,0 +1,2 @@
+this text file was made in the write_some_text method
+added another line for better understanding of write
