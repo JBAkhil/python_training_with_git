@@ -1,6 +1,6 @@
 import concurrent.futures
 import time
-
+"""program to showcase simple thread"""
 start = time.perf_counter()
 
 """showcasing timer"""
