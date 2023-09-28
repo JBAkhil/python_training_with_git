@@ -1,3 +1,4 @@
+"""Temperature log storage with file handling, datetime and threading"""
 import threading
 import datetime
 import random
@@ -24,7 +25,7 @@ def log_temperature(sensor_id, stop_event):
         log_file = os.path.join(log_dir, f"{current_time.date()}_log.txt")
 
         # Append the temperature data to the log file
-        with open(log_file, "a") as file:
+        with open(log_file, "a", encoding="utf8") as file:
             file.write(log_line)
 
         # Sleep for a fixed duration ex: 2sec
@@ -45,7 +46,7 @@ def main():
         stop_events.append(stop_event)
 
     # Run the threads for a fixed duration ex: 10sec
-    run_duration = 10 
+    run_duration = 10
     time.sleep(run_duration)
 
     # Signal the threads to stop
